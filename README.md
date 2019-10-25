@@ -1,5 +1,11 @@
 # Quotes
 
+Application to create quotes and have them voted up or down or deleted
+
+#Author
+patrick maina
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
 ## Development server
