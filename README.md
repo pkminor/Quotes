@@ -2,7 +2,7 @@
 
 Application to create quotes and have them voted up or down or deleted
 
-#Author
+# Author
 patrick maina
 
 
