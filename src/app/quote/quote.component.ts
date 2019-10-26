@@ -9,8 +9,13 @@ export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
     new Quote("Albert Einstein","username",
+    "Everything should be made as simple as possible, but not simpler"),
+    new Quote("Albert Einstein","username",
     "Everything should be made as simple as possible, but not simpler")
+
    ];
+
+   addNewQuote(quote){ this.quotes.push(quote); }
 
   constructor() { }
 

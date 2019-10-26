@@ -14,12 +14,12 @@
           <footer class="blockquote-footer">{{quote.author}}</footer>
         </blockquote>
       </div>
-      <div class="card-footer">
+      <div class="card-footer">{{quote.createDate}} | {{quote.likes}} | {{quote.dislikes}}
       </div>
 
     </div>
 
-    <app-quote-form></app-quote-form>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
 
   </div>
