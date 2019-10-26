@@ -1,22 +1,15 @@
-<div class="container mt-3 mb-2 sticky-bottom">
-  <form class="" (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-
-    <div class="row">
-
-      <div class="col">
+<div class="quoteform p-3">
+  <form class="mt-5" (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
 
         <div class="form-group">
           <textarea
           name="quote" id="quote"
           class="form-control noresize"
           #quote='ngModel' [(ngModel)]="newQuote.content"
-          cols="30" rows="3" placeholder="Add your quote">
+          cols="30" rows="3" placeholder="Share your quote...">
           </textarea>
         </div>
 
-      </div>
-
-      <div class="col">
 
         <div class="form-group">
           <input
@@ -32,11 +25,10 @@
           #username='ngModel' [(ngModel)]="newQuote.user" placeholder="Username...">
         </div>
 
-      </div>
-    </div>
 
-    <div class="text-center">
+    <div class="">
       <button  class="btn btn-success">Add Quote</button>
     </div>
+
   </form>
 </div>
