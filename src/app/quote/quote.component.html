@@ -5,12 +5,16 @@
       Quotes
     </div>
 
-    <div class="card shadow-sm bg-white mb-2 border-0" *ngFor='let i of [1,2,3,4,5,1,2,3,4,5,6,7]'>
-      <div class="card-body">
+    <div class="card shadow-sm bg-white mb-2 border-0" *ngFor='let quote of quotes'>
 
+      <div class="card-body">
+        <span> <i class="fa fa-user-circle"></i> {{quote.user}}</span>
+        <blockquote class="blockquote">
+          <p class="mb-0">{{quote.content}}</p>
+          <footer class="blockquote-footer">{{quote.author}}</footer>
+        </blockquote>
       </div>
       <div class="card-footer">
-
       </div>
 
     </div>
