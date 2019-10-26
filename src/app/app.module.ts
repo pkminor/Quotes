@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteVoteComponent } from './quote-vote/quote-vote.component';
+import { PopularQuoteDirective } from './popular-quote.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteFormComponent,
-    QuoteVoteComponent
+    QuoteVoteComponent,
+    PopularQuoteDirective
   ],
   imports: [
     BrowserModule,
