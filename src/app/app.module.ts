@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteVoteComponent } from './quote-vote/quote-vote.component';
 import { PopularQuoteDirective } from './popular-quote.directive';
+import { QuoteBodyComponent } from './quote-body/quote-body.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PopularQuoteDirective } from './popular-quote.directive';
     QuoteComponent,
     QuoteFormComponent,
     QuoteVoteComponent,
-    PopularQuoteDirective
+    PopularQuoteDirective,
+    QuoteBodyComponent
   ],
   imports: [
     BrowserModule,

@@ -11,13 +11,8 @@
     <div class="container">
     <div class="card shadow-sm bg-white mb-2 border-0" *ngFor='let quote of quotes; let i=index'>
 
-      <div class="card-body">
-        <span> <i class="fa fa-user-circle mr-2"></i> {{quote.user}}</span>
-        <blockquote class="blockquote">
-          <p class="mb-0">{{quote.content}}</p>
-          <footer class="blockquote-footer">{{quote.author}}</footer>
-        </blockquote>
-      </div>
+      <app-quote-body *ngIf='i==0 && quote.likes>0' [quote]='quote' appPopularQuote></app-quote-body>
+      <app-quote-body *ngIf='i!=0 || (i==0 && quote.likes==0)' [quote]='quote'></app-quote-body>
       <div class="card-footer">
         {{quote.createDate}}
         <app-quote-vote
