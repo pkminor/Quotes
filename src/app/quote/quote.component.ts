@@ -28,6 +28,8 @@ export class QuoteComponent implements OnInit {
      this.quotes.sort((left,right):number=>{ return (left.likes>right.likes)? -1:1; })
    }
 
+   deleteQuote(deleteQuoteEvent,index :number){ this.quotes.splice(index,1);}
+
   constructor() { }
 
   ngOnInit() {

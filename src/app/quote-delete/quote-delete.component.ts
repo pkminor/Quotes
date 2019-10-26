@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quote-delete',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteDeleteComponent implements OnInit {
 
+   @Output() deleteQuoteEvent = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  deleteQuote(deleteQuote:boolean){this.deleteQuoteEvent.emit(deleteQuote);}
+
 
 }

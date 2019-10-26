@@ -13,12 +13,22 @@
 
       <app-quote-body *ngIf='i==0 && quote.likes>0' [quote]='quote' appPopularQuote></app-quote-body>
       <app-quote-body *ngIf='i!=0 || (i==0 && quote.likes==0)' [quote]='quote'></app-quote-body>
+
       <div class="card-footer">
+
         {{quote.createDate}}
-        <app-quote-vote
-           (voteQuote)='addVote($event,i)'
-           [likes]='quote.likes'
-           [dislikes]='quote.dislikes'></app-quote-vote>
+
+        <span class="float-right">
+
+          <app-quote-vote
+             (voteQuote)='addVote($event,i)'
+             [likes]='quote.likes'
+             [dislikes]='quote.dislikes'></app-quote-vote>
+
+          <app-quote-delete (deleteQuoteEvent)='deleteQuote($event,i)'></app-quote-delete>
+
+        </span>
+
       </div>
 
     </div>

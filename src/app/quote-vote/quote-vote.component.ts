@@ -8,13 +8,13 @@ import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
 export class QuoteVoteComponent implements OnInit {
   @Input() likes:number;
   @Input() dislikes:number;
-  @Output() voteQuote = new EventEmitter<boolean>();
+  @Output() voteQuoteEvent = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  vote(likeQuote:boolean){ this.voteQuote.emit(likeQuote); }
+  vote(likeQuote:boolean){ this.voteQuoteEvent.emit(likeQuote); }
 
 }
