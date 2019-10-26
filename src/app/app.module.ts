@@ -10,6 +10,7 @@ import { QuoteVoteComponent } from './quote-vote/quote-vote.component';
 import { PopularQuoteDirective } from './popular-quote.directive';
 import { QuoteBodyComponent } from './quote-body/quote-body.component';
 import { QuoteDeleteComponent } from './quote-delete/quote-delete.component';
+import { TimelinePipe } from './timeline.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuoteDeleteComponent } from './quote-delete/quote-delete.component';
     QuoteVoteComponent,
     PopularQuoteDirective,
     QuoteBodyComponent,
-    QuoteDeleteComponent
+    QuoteDeleteComponent,
+    TimelinePipe
   ],
   imports: [
     BrowserModule,
