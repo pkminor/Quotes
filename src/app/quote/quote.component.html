@@ -9,16 +9,21 @@
     </div>
 
     <div class="container">
-    <div class="card shadow-sm bg-white mb-2 border-0" *ngFor='let quote of quotes'>
+    <div class="card shadow-sm bg-white mb-2 border-0" *ngFor='let quote of quotes; let i=index'>
 
       <div class="card-body">
-        <span> <i class="fa fa-user-circle"></i> {{quote.user}}</span>
+        <span> <i class="fa fa-user-circle mr-2"></i> {{quote.user}}</span>
         <blockquote class="blockquote">
           <p class="mb-0">{{quote.content}}</p>
           <footer class="blockquote-footer">{{quote.author}}</footer>
         </blockquote>
       </div>
-      <div class="card-footer">{{quote.createDate}} | {{quote.likes}} | {{quote.dislikes}}
+      <div class="card-footer">
+        {{quote.createDate}}
+        <app-quote-vote
+           (voteQuote)='addVote($event,i)'
+           [likes]='quote.likes'
+           [dislikes]='quote.dislikes'></app-quote-vote>
       </div>
 
     </div>

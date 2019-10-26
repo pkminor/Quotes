@@ -1,1 +1,13 @@
-<p>quote-vote works!</p>
+<span>
+
+  <span (click)='vote(true)'
+        class="badge badge-pill text-success badge-secondary fa fa-thumbs-up pl-2 m-1">
+    <span class="ml-2 text-white" >{{likes}}</span>
+  </span>
+
+  <span (click)='vote(false)'
+        class="badge badge-pill text-danger badge-secondary  fa fa-thumbs-down pl-2 m-1">
+    <span class="ml-2 text-white" >{{dislikes}}</span>
+  </span>
+
+</span>
