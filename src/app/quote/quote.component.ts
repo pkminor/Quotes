@@ -8,10 +8,10 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
-    new Quote("Albert Einstein","username",
-    "Everything should be made as simple as possible, but not simpler"),
-    new Quote("Albert Einstein","username",
-    "Everything should be made as simple as possible, but not simpler")
+    new Quote("Obama","username", "Yes we can."),
+    new Quote("Lupita Nyong'o","username", "Dreams are valid."),
+    new Quote("Eliud Kipchoge","username", "No human is limited."),
+    new Quote("Albert Einstein","username", "Everything should be made as simple as possible, but not simpler.")
 
    ];
 
@@ -21,7 +21,7 @@ export class QuoteComponent implements OnInit {
 
      (likeQuote) ?
      this.quotes[index].likes +=1 :
-     this.quotes[index].dislikes +=1;
+     this.quotes[index].dislikes += (index>3)? 1 : 0;
    }
 
   constructor() { }
