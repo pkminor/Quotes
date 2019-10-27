@@ -1,10 +1,20 @@
 # Quotes
 
-Application to create quotes and have them voted up or down or deleted
+Application to create quotes and have them voted up or down or deleted. [Quotes](https://pkminor.github.io/Quotes/)
 
 # Author
 patrick maina
 
+## How it works
+
+Upon loading, the application represents an interface to view quotes. By default, four quotes have been included.
+A user can upvote, downvote or delete any of the quotes. They can also share their own quotes.
+
+The initial quotes have an exception to being downvoted or deleted. However any other quote added can be downvoted or deleted in addition to being upvoted.
+
+For each quote the application will show how long since the quote was submitted.
+
+## Technical details
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
@@ -14,7 +24,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component.
+You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
