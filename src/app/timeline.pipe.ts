@@ -7,7 +7,7 @@ export class TimelinePipe implements PipeTransform {
 
   transform(value: any): string {
 
-    let today:Date=new Date();
+    let today:any=new Date();
     let todayWithNoTime:any=new Date(today.getFullYear(),today.getMonth(),today.getDate());
     var dateDifference = Math.abs(value-today);
     const secondsInDay=86400;
