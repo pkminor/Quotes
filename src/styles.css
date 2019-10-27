@@ -3,6 +3,7 @@ body {background-color:#f4f4f4; user-select:none;}
 .quotes {width:60%;margin:auto;}
 .quotenav {position:fixed;top:0;left:0;height:100%;overflow:auto;background-color:white;width:20%;}
 .quoteform {position:fixed;top:0;right:0;height:100%;overflow:auto;background-color:white;width:20%;}
+.badge {cursor:pointer;}
 
 
 textarea{resize:none;}
