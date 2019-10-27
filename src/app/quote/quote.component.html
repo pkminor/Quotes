@@ -21,11 +21,11 @@
         <span class="float-right">
 
           <app-quote-vote
-             (voteQuoteEvent)='addVote($event,i)'
+             (voteQuoteEvent)='addVote($event,i,quote)'
              [likes]='quote.likes'
              [dislikes]='quote.dislikes'></app-quote-vote>
 
-          <app-quote-delete (deleteQuoteEvent)='deleteQuote($event,i)'></app-quote-delete>
+          <app-quote-delete (deleteQuoteEvent)='deleteQuote($event,i,quote)'></app-quote-delete>
 
         </span>
 

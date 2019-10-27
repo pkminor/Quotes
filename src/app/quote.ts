@@ -9,7 +9,8 @@ export class Quote {
     public author:string,
     public user:string,
     public content:string,
-    public createDate:Date)
+    public createDate:Date,
+    public isDefault:boolean)
   { this.likes=0; this.dislikes=0;}
 
 }
