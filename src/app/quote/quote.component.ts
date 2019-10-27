@@ -11,7 +11,8 @@ export class QuoteComponent implements OnInit {
     new Quote(1,"Barack Obama","username", "Yes we can.",new Date("2019-08-08")),
     new Quote(2,"Lupita Nyong'o","username", "Dreams are valid.",new Date("2019-10-26")),
     new Quote(3,"Eliud Kipchoge","username", "No human is limited.",new Date("2019-10-26 23:57:00")),
-    new Quote(4,"Albert Einstein","username", "Everything should be made as simple as possible, but not simpler.",new Date())
+    new Quote(4,"George Saitoti","username", "There comes a time when the nation is more important than one individual.",new Date("2002-03-18")),
+    new Quote(5,"Albert Einstein","username", "Everything should be made as simple as possible, but not simpler.",new Date())
    ];
 
    addNewQuote(quote){
@@ -28,7 +29,7 @@ export class QuoteComponent implements OnInit {
 
      (likeQuote) ?
      this.quotes[index].likes +=1 :
-     this.quotes[index].dislikes += (index>3)? 1 : 0;
+     this.quotes[index].dislikes += (index>4)? 1 : 0;
 
      this.quotes.sort((left,right):number=>{ return (left.likes>right.likes)? -1:1; })
    }
