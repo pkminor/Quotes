@@ -17,7 +17,12 @@ export class QuoteComponent implements OnInit {
    addNewQuote(quote){
       quote.createDate=new Date();
       quote.id=this.quotes.length+1;
-      this.quotes.push(quote); }
+      this.quotes.push(quote);
+
+      quote.author="";
+      quote.user="";
+      quote.content="";
+    }
 
    addVote(likeQuote,index:number){
 
