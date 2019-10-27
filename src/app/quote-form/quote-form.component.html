@@ -1,5 +1,5 @@
 <div class="quoteform p-3">
-  <form class="mt-5" (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+  <form class="mt-5" #quoteForm='ngForm' (ngSubmit)='submitQuote(quoteForm)' >
 
         <div class="form-group">
           <textarea

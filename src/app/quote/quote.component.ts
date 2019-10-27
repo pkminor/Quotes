@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Quote } from '../quote';
 @Component({
   selector: 'app-quote',
@@ -6,7 +6,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
+ //@ViewChild('quoteForm') quoteform;
   quotes: Quote[]=[
     new Quote(1,"Barack Obama","username", "Yes we can.",new Date("2019-08-08"),true),
     new Quote(2,"Lupita Nyong'o","username", "Dreams are valid.",new Date("2019-10-26"),true),
@@ -19,10 +19,8 @@ export class QuoteComponent implements OnInit {
       quote.createDate=new Date();
       quote.id=this.quotes.length+1;
       this.quotes.push(quote);
+      //this.quoteform.resetForm();
 
-      quote.author="";
-      quote.user="";
-      quote.content="";
     }
 
    addVote(likeQuote,index:number,quote:Quote){
