@@ -37,9 +37,14 @@ export class QuoteComponent implements OnInit {
 
    deleteQuote(deleteQuoteEvent,index :number,quote:Quote){ if(!quote.isDefault) this.quotes.splice(index,1);}
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { this.dataFetch(); } 
 
   ngOnInit() {
+
+
+  }
+
+  dataFetch(){
     interface ApiResponse{author:string;quote:string}
 
     this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(
@@ -50,7 +55,6 @@ export class QuoteComponent implements OnInit {
         new Quote(this.quotes.length+1,"error","http get",err.message,new Date(), false)
       )}
     );
-    
   }
 
 }
