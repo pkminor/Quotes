@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Quote } from '../quote';
+
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -34,9 +37,20 @@ export class QuoteComponent implements OnInit {
 
    deleteQuote(deleteQuoteEvent,index :number,quote:Quote){ if(!quote.isDefault) this.quotes.splice(index,1);}
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    interface ApiResponse{author:string;quote:string}
+
+    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(
+      data=>{ this.quotes.push(
+        new Quote(this.quotes.length+1,data.author,"http get",data.quote,new Date(), false)
+      )},
+      err=>{ this.quotes.push(
+        new Quote(this.quotes.length+1,"error","http get",err.message,new Date(), false)
+      )}
+    );
+    
   }
 
 }
